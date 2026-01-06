@@ -8,7 +8,14 @@ jobs:
         run: ls -a
       - name: Basic CPU details
         run: lscpu
-      - name: Real-time CPU usage
-        run: top
       - name: RAM usage (human readable)
         run: free -h
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Run multiple commands
+         run: |
+          lscpu
+          uname -r
+          free -h
+          nproc
