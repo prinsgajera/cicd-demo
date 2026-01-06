@@ -6,7 +6,9 @@ jobs:
     steps:
       - name: List all files
         run: ls -a
-      - name: Prins working directory
-        run: pwd
-      - name: Create js file
-        run: echo 'console.log("Hello World!");' > app.js
+      - name: Basic CPU details
+        run: lscpu
+      - name: Real-time CPU usage
+        run: top
+      - name: RAM usage (human readable)
+        run: free -h
