@@ -6,4 +6,4 @@ jobs:
     steps:
         - run: ls -a
         - run: pwd
-        - run: echo ${{github}}
+        - run: echo ${{toJson(github}}
