@@ -6,4 +6,7 @@ jobs:
     steps:
         - run: ls -a
         - run: pwd
-        - run: echo "${{toJson(github)}}"
+        - run: echo "${{toJson(env)}}"
+        - run: echo "${{toJson(vars)}}"
+        - run: echo "${{toJson(secrets)}}"
+        - run: echo "${{toJson(runner)}}"
