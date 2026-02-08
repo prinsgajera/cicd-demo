@@ -2,10 +2,13 @@ name: My first workflow
 on: [push, workflow_dispatch]
 jobs:
   my-first-job:
-    env:
-      test: "My Test Variable."
-      HELLO: "Hello World!"
+    if: false
     runs-on: ubuntu-latest
     steps:
-        - run: echo "${{toJson(env.HELLO)}}"
-        - run: echo "$HELLO"
+      - run: echo "Hello World! 1"
+
+  my-second-job:
+    if: true
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World! 2"
